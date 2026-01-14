@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWXM1H2GF4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-WWXM1H2GF4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics: Mean, Median, and Mode with examples - StackView
+      
+        - StackView
+    </title>
+    <meta name="description" content="The mean is the sum of all values of a dataset divided by total numbers. The mode is the most frequent number in a dataset. The median is the middle of the set of numbers when it is in sorted order.">
+    <meta name="keywords" content="python, CSV, pandas, statistics, data analysis">
+    <meta name="author" content="StackView">
+    <meta property="og:title" content="Statistics: Mean, Median, and Mode with examples - StackView">
+    <meta property="og:description" content="The mean is the sum of all values of a dataset divided by total numbers. The mode is the most frequent number in a dataset. The median is the middle of the set of numbers when it is in sorted order.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stackview.dev/blog/mean-median-mode/">
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Statistics: Mean, Median, and Mode with examples - StackView">
+      <meta name="twitter:description" content="The mean is the sum of all values of a dataset divided by total numbers. The mode is the most frequent number in a dataset. The median is the middle of the set of numbers when it is in sorted order.">
+    
+    <link rel="canonical" href="https://stackview.dev/blog/mean-median-mode/">
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/images/faviconv.png"/>
+  </head>
+  <body class="bg-white dark:bg-dark-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div class="min-h-screen">
+      <!-- Header -->
+<header class="bg-white dark:bg-dark-800 border-b border-gray-200 dark:border-dark-700 sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center justify-center">
+          <img src="/assets/images/logov.png" alt="logo" class="site-logo" height="30" width="30">
+          <span class="text-[22px] ml-2 mt-[2px] font-bold text-gray-800 dark:text-gray-300">StackView</span>
+        </a>
+      </div>
+      <!-- Navigation -->
+      <div
+        class="flex items-center space-x-4">
+        <!-- Theme Toggle -->
+        <button
+          id="theme-toggle"
+          class="p-2 rounded-lg bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors">
+          <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343
+                17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+        <nav class="hidden sm:flex items-center space-x-6">
+          <a
+            href="/blogs/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            Blog</a>
+          <a
+            href="/answers/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            Answer</a>
+          <a
+            href="/about/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            About</a>
+          <a
+            href="/contact/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            Contact</a>
+          <a
+            href="/search/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="sm:hidden hidden pb-4">
+      <nav class="flex flex-col space-y-2">
+        <a
+          href="/blogs/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          Blog</a>
+        <a
+          href="/answers/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          Answer</a>
+        <a
+          href="/about/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          About</a>
+        <a
+          href="/contact/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          Contact</a>
+        <a
+          href="/search/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          Search</a>
+      </nav>
+    </div>
+  </div>
+</header>
+      <main>
+        
+<div
+  class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <!-- Article -->
+  <article
+    class="prose prose-lg dark:prose-invert max-w-none">
+    <!-- Article Header -->
+    <header class="mb-8">
+      <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+        <time datetime="2025-10-13T00:00:00.000Z">October 13, 2025</time>
+        <span class="mx-2">•</span>
+        <a
+          href="/category/statistics/"
+          class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Statistics</a>
+        <span class="mx-2">•</span>
+        <span>4 min read</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        Statistics: Mean, Median, and Mode with examples
+      </h1>
+    </header>
+    <!-- Table of Contents (only show if TOC exists) -->
+    
+      <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-8">
+        <button
+          onclick="toggleTOC()"
+          class="flex items-center justify-between w-full text-left font-semibold text-gray-900 dark:text-white hover:text-blue-600
+            dark:hover:text-blue-400 transition-colors">
+          <span class="text-lg flex items-center justify-center">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0
+                4h5v2H8v-2z"></path>
+            </svg>
+            Table of Contents</span>
+          <svg
+            id="toc-chevron"
+            class="w-5 h-5 transform transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <nav
+          id="toc-content" class="mt-4 space-y-2"><!-- TOC will be populated by JavaScript -->
+        </nav>
+      </div>
+    
+    <!-- Article Content -->
+    <div class="space-y-6" id="article-content">
+      <p><img src="/assets/images/mmm-image.jpg" alt="Read CSV without Pandas"></p>
+<p>Do you ever think about how many percent of people own a larger portion of the wealth?</p>
+<p>Let’s take an example of India,
+According to Oxfam 2017 report,</p>
+<p><em>The top 10% of the Indian population holds 77% of the total national wealth. 73% of the wealth generated in 2017 went to the richest 1%, while 67 million Indians who comprise the poorest half of the population saw only a 1% increase in their wealth.</em></p>
+<p>So as you can see, there is an unequal distribution of wealth in India. It is also much the same in other parts of the world. We often think that if wealth is equally divided then how good it will be.</p>
+<p>Suppose today is your lucky day, your wish is granted and all the people have decided to distribute wealth equally among themself.</p>
+<p>Here the question arises. <br>
+<strong>1.</strong> How will you distribute wealth equally?
+<strong>2.</strong> How the government calculates the average salary for a country?
+<strong>3.</strong> Which salary range has the maximum number of people?</p>
+<p>Here maths comes to solve your problem, we all have heard the three most popular words of maths <strong>MEAN, MEDIAN</strong>, and <strong>MODE</strong>. Now we have to find out when and where these are going to help us.</p>
+<p>Let’s understand it with the help of an example.</p>
+<p>country X has 10 people and we have their wealth data as given below.</p>
+<div class="img-center">
+  <img src="/assets/images/mmm-salary.png" alt="salary image" width="600">
+</div>
+<p>Now we come to our first question.
+How will you distribute wealth equally?</p>
+<p>First, we have to calculate what is the total wealth. So for that, we will sum up the wealth.</p>
+<p><strong>Total wealth</strong> = 7 + 3 + 20 + 12 + 1 + 9 + 5 + 17 + 22 + 8 = <strong>104 Million</strong></p>
+<p>Now we calculate how much any individual will get = Total Wealth / Total no. of people</p>
+<p>= 104 / 10</p>
+<p>= <strong>10.4 Million</strong></p>
+<p>If we distribute wealth equally among all the people then each one will get 10.4 million. What we calculate above, In a maths language that is called MEAN.</p>
+<h2>MEAN</h2>
+<p><strong>MEAN</strong>: Mean is the sum of all the items divided by the total number of items. It is also called Average.</p>
+<div class="img-center">
+  <img src="/assets/images/mean.png" alt="Mean image" width="300">
+</div>
+<p>It’s time for the second question.
+How the government calculates the average salary for a country?</p>
+<p>First, we will short(arrange all salaries in increasing or decreasing order) the data.</p>
+<p>Now we will find out the middle point in the data. But items are even so we will take the middle two items. Here person J and F. Whose wealth are 8 and 9 million respectively.</p>
+<p>We will take the mean of J and F wealth the find out the middle value.</p>
+<p>= 8+9 / 2 <br>
+= <strong>8.5 Million</strong></p>
+<p>The middle value is <strong>8.5 Million</strong>. This is the answer to our second question. This whole process is also called MEDIAN.</p>
+<h2>MEDIAN</h2>
+<p><strong>MEDIAN</strong>: The number in the middle in sorted data is called MEDIAN. If data has even items then the Median will be the mean of those two middle values.</p>
+<p>If data has an odd no. of items.</p>
+<div class="img-center">
+  <img src="/assets/images/odd-median.png" alt="odd median" width="400">
+</div>
+<p>If data has even no. of items.</p>
+<div class="img-center">
+  <img src="/assets/images/even-median.png" alt="even median" width="400">
+</div>
+<p>It’s time for our last question.
+Which salary range has the maximum number of people?</p>
+<p>First, we will decide the range and count the people in that range.</p>
+<div class="img-center">
+  <img src="/assets/images/salary-range.png" alt="Salary range" width="600">
+</div>
+<p>Most of the people have salaries in the range of 5 million to 10 million. It is called MODE in Maths.</p>
+<h2>MODE</h2>
+<p><strong>MODE</strong>: Which item has the highest frequency is called MODE.</p>
+<div class="img-center">
+  <img src="/assets/images/mode.png" alt="Mode image" width="600">
+</div>
+<p>According to the number line,2 is the mode.</p>
+<p>Thanks for visiting StackView.</p>
+
+      <!-- Share buttons -->
+      <div class="border-t border-gray-200 dark:border-dark-700 pt-8 mt-12">
+        <div class="flex items-center justify-end">
+          <a href="/" class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-700 font-medium">
+            ← Back to all articles
+          </a>
+        </div>
+        <div class="flex items-center space-x-4 mt-5">
+          <span class="text-sm text-gray-500 dark:text-gray-400">Share this article:</span>
+          <button
+            style="cursor:pointer"
+            onclick="shareArticle('twitter')"
+            class="text-blue-600 dark:text-blue-400 hover:text-blue-700">Twitter</button>
+          <button
+            style="cursor:pointer"
+            onclick="shareArticle('linkedin')"
+            class="text-blue-600 dark:text-blue-400 hover:text-blue-700">LinkedIn</button>
+        </div>
+      </div>
+    </article>
+  </div>
+      </main>
+      <!-- Footer -->
+<footer class="bg-gray-50 dark:bg-dark-800 border-t border-gray-200 dark:border-dark-700 mt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="md:col-span-2">
+        <a href="/" class="text-2xl font-bold text-gray-800 dark:text-gray-400 mb-4 block">
+          Stack<span class="text-2xl font-bold text-blue-600 dark:text-blue-400">View</span>
+        </a>
+        <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+          Empowering software engineers with expert insights, best practices, and modern tool and techniques.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="https://x.com/stackview_dev"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713
+                6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/stackview.dev"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125
+                11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491
+                0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/stackview.dev"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012
+                3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204
+                0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849
+                0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014
+                7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98
+                6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618
+                6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259
+                0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44
+                0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@stackviewyt"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502
+                6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0
+                9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273
+                3.568z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/blogs"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Blog</a>
+          </li>
+          <li>
+            <a
+              href="/answers"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Answer</a>
+          </li>
+          <li>
+            <a
+              href="/about/"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+          </li>
+          <li>
+            <a
+              href="/contact/"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+          </li>
+          <li>
+            <a
+              href="/privacy-policy/"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</a>
+          </li>
+          <li>
+            <a
+              href="/sitemap.xml"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Sitemap</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Top Categories</h4>
+        <ul class="space-y-2">
+          
+            
+              <li>
+                <a
+                  href="/category/data-analysis/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Data Analysis</a>
+              </li>
+            
+          
+            
+              <li>
+                <a
+                  href="/category/python/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Python</a>
+              </li>
+            
+          
+            
+              <li>
+                <a
+                  href="/category/statistics/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Statistics</a>
+              </li>
+            
+          
+            
+              <li>
+                <a
+                  href="/category/version-control/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Version Control</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 dark:border-dark-700 mt-8 pt-8 text-center">
+      <p class="text-gray-600 dark:text-gray-400">Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        | StackView | All rights reserved</p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

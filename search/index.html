@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWXM1H2GF4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-WWXM1H2GF4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search
+      
+        - StackView
+    </title>
+    <meta name="description" content="Search through StackView articles and answers guides">
+    <meta name="keywords" content="">
+    <meta name="author" content="StackView">
+    <meta property="og:title" content="Search">
+    <meta property="og:description" content="Search through StackView articles and answers guides">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stackview.dev/search/">
+    
+    <link rel="canonical" href="https://stackview.dev/search/">
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/images/faviconv.png"/>
+  </head>
+  <body class="bg-white dark:bg-dark-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div class="min-h-screen">
+      <!-- Header -->
+<header class="bg-white dark:bg-dark-800 border-b border-gray-200 dark:border-dark-700 sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center justify-center">
+          <img src="/assets/images/logov.png" alt="logo" class="site-logo" height="30" width="30">
+          <span class="text-[22px] ml-2 mt-[2px] font-bold text-gray-800 dark:text-gray-300">StackView</span>
+        </a>
+      </div>
+      <!-- Navigation -->
+      <div
+        class="flex items-center space-x-4">
+        <!-- Theme Toggle -->
+        <button
+          id="theme-toggle"
+          class="p-2 rounded-lg bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors">
+          <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+          <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343
+                17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+          </svg>
+        </button>
+        <nav class="hidden sm:flex items-center space-x-6">
+          <a
+            href="/blogs/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            Blog</a>
+          <a
+            href="/answers/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            Answer</a>
+          <a
+            href="/about/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            About</a>
+          <a
+            href="/contact/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium ">
+            Contact</a>
+          <a
+            href="/search/"
+            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium text-blue-600 dark:text-blue-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="sm:hidden hidden pb-4">
+      <nav class="flex flex-col space-y-2">
+        <a
+          href="/blogs/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          Blog</a>
+        <a
+          href="/answers/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          Answer</a>
+        <a
+          href="/about/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          About</a>
+        <a
+          href="/contact/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 ">
+          Contact</a>
+        <a
+          href="/search/"
+          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium py-2 text-blue-600 dark:text-blue-400">
+          Search</a>
+      </nav>
+    </div>
+  </div>
+</header>
+      <main>
+        
+<div
+    class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Page Header -->
+    <div class="mb-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Search Articles
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-400">
+            Find investment insights, market analysis, and trading strategies
+        </p>
+    </div>
+    <!-- Search Box -->
+    <div class="mb-8">
+        <div class="relative">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search for articles, topics, or keywords..."
+                class="w-full px-6 py-4 text-lg bg-white dark:bg-dark-800 border-2 border-gray-300 dark:border-dark-600 rounded-xl
+                    focus:outline-none focus:border-blue-500 dark:focus:border-blue-400 text-gray-900 dark:text-white"
+                autocomplete="off">
+                <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                <span id="search-count">0</span>
+                articles available to search
+            </div>
+        </div>
+        <!-- Search Results -->
+        <div
+            id="search-results">
+            <!-- Initial state: Show all articles -->
+            <div id="all-articles">
+                <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    All Articles
+                </h2>
+                <div class="space-y-4">
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/mean-median-mode/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        Statistics: Mean, Median, and Mode with examples
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 rounded text-xs font-medium">
+                                        Statistics
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    The mean is the sum of all values of a dataset divided by total numbers. The mode is the most frequent number in a dataset. The median is the middle of the set of numbers when it is in sorted order.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>4 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/install-git-on-local-system/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        How to Install Git on Your Local System Step-by-Step Guide for Beginners
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-gray-100 dark:bg-gray-900/30 text-gray-800 dark:text-gray-300 rounded text-xs font-medium">
+                                        Version Control
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    Learn about how to install git on your operating system with easy to follow step by step guide. Complete guide for Linux, MacOs, and Window installation.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>1 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/how-to-read-excel-in-python-without-pandas/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        How to read Excel file in Python without using Pandas
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-xs font-medium">
+                                        Python
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    Learn how to read Excel file in Python programming language without using Pandas library. We can read Excel file with other python libraries like openpyxl and xlrd. Boost your Python skills by learning these new techniques.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>3 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/how-to-read-csv/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        How to read CSV files with or without Pandas
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-xs font-medium">
+                                        Python
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    CSV Means Comma Separated Values. CSV is a simple file used to store data as a spreadsheet or database. And we can read it with or without Pandas.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>3 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/export-dataframe-to-csv-with-pandas/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        How to export DataFrame to CSV using pandas
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-xs font-medium">
+                                        Python
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    Explore: How to save/export DataFrame to CSV using pandas with python programming language. It will save your CSV file to your given location very easily.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>3 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/exploratory-data-analysis/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        Exploratory Data Analysis: Iris Flower Dataset in-depth
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded text-xs font-medium">
+                                        Data Analysis
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    EDA is a process or approach to finding out the most useful features from the dataset according to your problem which helps you to choose the correct and efficient algorithm for your solution.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>14 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/create-excel-with-python/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        How to create an Excel file with Python using xlwt
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded text-xs font-medium">
+                                        Python
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    Python&#39;s XLWT library allows you to write Excel files. In addition to text and numbers, formulas can also be entered into multiple worksheets. Other features include styling text, managing column size, and more.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>2 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/blog/configure-git-on-local-system/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        Quick Guide: Configuring Git on Your Local System
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-gray-100 dark:bg-gray-900/30 text-gray-800 dark:text-gray-300 rounded text-xs font-medium">
+                                        Version Control
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    Learn about how to install &amp; configure git on your operating system with easy to follow step by step guide.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Mon Oct 13 2025 05:30:00 GMT+0530 (India Standard Time)">October 13, 2025</time>
+                                    <span class="mx-2">•</span>
+                                    <span>1 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                    
+                        <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg
+                                transition-shadow">
+                            <a href="/answer/change-timezone-in-django-project/" class="block">
+                                <div class="flex items-start justify-between mb-2">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400
+                                            transition-colors">
+                                        How to change timezone in Django projects
+                                    </h3>
+                                    <span class="inline-flex items-center px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded text-xs font-medium">
+                                        Django
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 mb-3">
+                                    Learn, How we can change the timezone of our Django project then the project will refer to that time to give you a time stamp on that timezone.
+                                </p>
+                                <div class="flex items-center text-sm text-gray-500 dark:text-gray-500">
+                                    <time datetime="Sun May 19 2024 05:30:00 GMT+0530 (India Standard Time)">May 19, 2024</time>
+                                    <span class="mx-2">•</span>
+                                    <span>1 min read</span>
+                                </div>
+                            </a>
+                        </article>
+                    
+                </div>
+            </div>
+            <!-- Search results will be inserted here -->
+            <div id="results-container" class="hidden">
+                <div class="mb-4">
+                    <h2 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Search Results:
+                        <span id="results-count">0</span>
+                    </h2>
+                </div>
+                <div
+                    id="results-list" class="space-y-4"><!-- Results will be inserted by JavaScript -->
+                </div>
+            </div>
+            <!-- No results state -->
+            <div id="no-results" class="hidden text-center py-12">
+                <svg class="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    No results found
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400">
+                    Try adjusting your search terms or browse all articles above
+                </p>
+            </div>
+        </div>
+    </div>
+      </main>
+      <!-- Footer -->
+<footer class="bg-gray-50 dark:bg-dark-800 border-t border-gray-200 dark:border-dark-700 mt-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="md:col-span-2">
+        <a href="/" class="text-2xl font-bold text-gray-800 dark:text-gray-400 mb-4 block">
+          Stack<span class="text-2xl font-bold text-blue-600 dark:text-blue-400">View</span>
+        </a>
+        <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+          Empowering software engineers with expert insights, best practices, and modern tool and techniques.
+        </p>
+        <div class="flex space-x-4">
+          <a
+            href="https://x.com/stackview_dev"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713
+                6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/stackview.dev"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125
+                11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491
+                0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/stackview.dev"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012
+                3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204
+                0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849
+                0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014
+                7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98
+                6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618
+                6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259
+                0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44
+                0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@stackviewyt"
+            target="_blank"
+            class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502
+                6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0
+                9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273
+                3.568z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/blogs"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Blog</a>
+          </li>
+          <li>
+            <a
+              href="/answers"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              Answer</a>
+          </li>
+          <li>
+            <a
+              href="/about/"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+          </li>
+          <li>
+            <a
+              href="/contact/"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+          </li>
+          <li>
+            <a
+              href="/privacy-policy/"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</a>
+          </li>
+          <li>
+            <a
+              href="/sitemap.xml"
+              class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Sitemap</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Top Categories</h4>
+        <ul class="space-y-2">
+          
+            
+              <li>
+                <a
+                  href="/category/data-analysis/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Data Analysis</a>
+              </li>
+            
+          
+            
+              <li>
+                <a
+                  href="/category/python/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Python</a>
+              </li>
+            
+          
+            
+              <li>
+                <a
+                  href="/category/statistics/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Statistics</a>
+              </li>
+            
+          
+            
+              <li>
+                <a
+                  href="/category/version-control/"
+                  class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Version Control</a>
+              </li>
+            
+          
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 dark:border-dark-700 mt-8 pt-8 text-center">
+      <p class="text-gray-600 dark:text-gray-400">Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        | StackView | All rights reserved</p>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
