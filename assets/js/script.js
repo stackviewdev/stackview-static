@@ -110,7 +110,7 @@ function generateTOC() {
     const link = document.createElement("a");
     link.href = `#${heading.id}`;
     link.textContent = heading.textContent;
-    link.className = `block py-1.5 px-3 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors rounded ${
+    link.className = `block py-1.5 px-3 text-sm hover:text-black-600 dark:hover:text-black-400 transition-colors rounded ${
       level === 0
         ? "font-medium text-gray-900 dark:text-white"
         : "ml-4 text-gray-700 dark:text-gray-300"
@@ -241,13 +241,13 @@ function initializeSearch() {
         resultsList.innerHTML = results
           .map(
             (post) => `
-                    <article class="bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                    <article class="modern-card bg-white dark:bg-dark-800 border border-gray-200 dark:border-dark-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
                         <a href="${post.url}" class="block">
                             <div class="flex items-start justify-between mb-2">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white hover:text-black-600 dark:hover:text-black-400 transition-colors">
                                     ${highlightText(post.title, query)}
                                 </h3>
-                                <span class="ml-4 text-xs px-2 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-300 whitespace-nowrap">
+                                <span class="ml-4 text-xs px-2 py-1 rounded-full bg-black-100 dark:bg-black-900 text-black-800 dark:text-black-300 whitespace-nowrap">
                                     ${post.category}
                                 </span>
                             </div>

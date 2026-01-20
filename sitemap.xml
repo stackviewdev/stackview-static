@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://stackview.dev/</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/about/</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/contact/</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/blogs/</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/answers/</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/privacy-policy/</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/category/python</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/category/data-analysis</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/category/version-control</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/category/statistics</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://stackview.dev/category/statistics</loc>
+        <lastmod>2025-10-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+<loc>https://stackview.dev/blog/how-to-read-csv/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>http://stackview.dev/blog/how-to-read-excel-in-python-without-pandas/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>http://stackview.dev/blog/create-excel-with-python/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>http://stackview.dev/blog/export-dataframe-to-csv-with-pandas/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>http://stackview.dev/blog/mean-median-mode/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>http://stackview.dev/blog/exploratory-data-analysis/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>http://stackview.dev/blog/install-git-on-local-system/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>http://stackview.dev/blog/configure-git-on-local-system/</loc>
+<lastmod>2025-10-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+</urlset>
