@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWXM1H2GF4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-WWXM1H2GF4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      OS Module in Python beginner&#39;s guide with examples
+      
+        - StackView
+      
+    </title>
+    <meta name="description" content="Get a complete understanding of OS Module in Python with our guide covering essential functions for file handling, directory management, path manipulation, and also working with system environment variables.">
+    <meta name="keywords" content="stackview, python">
+    <meta name="author" content="StackView">
+    <meta property="og:title" content="OS Module in Python beginner&#39;s guide with examples">
+    <meta property="og:description" content="Get a complete understanding of OS Module in Python with our guide covering essential functions for file handling, directory management, path manipulation, and also working with system environment variables.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stackview.dev/blog/os-module-in-python/">
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="OS Module in Python beginner&#39;s guide with examples">
+      <meta name="twitter:description" content="Get a complete understanding of OS Module in Python with our guide covering essential functions for file handling, directory management, path manipulation, and also working with system environment variables.">
+    
+    <link rel="canonical" href="https://stackview.dev/blog/os-module-in-python/">
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/images/faviconv.png"/>
+  </head>
+  <body class="bg-white dark:bg-dark-1000 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div class="min-h-screen">
+      <!-- Header -->
+<header class="bg-white dark:bg-dark-800 border-b border-gray-200 dark:border-dark-700 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+            class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/" class="flex items-center justify-center">
+                    <img src="/assets/images/logov-dark.png" alt="logo" class="site-logo hidden dark:block" height="30" width="30">
+                    <img src="/assets/images/logov.png" alt="logo" class="site-logo block dark:hidden" height="30" width="30">
+                    <span class="text-[22px] ml-2 mt-[2px] font-bold text-black dark:text-white">Stack<span class="text-neutral-400 dark:text-neutral-500">View</span>
+                    </span>
+                </a>
+            </div>
+            <!-- Navigation -->
+            <div
+                class="flex items-center space-x-4">
+                <!-- Theme Toggle -->
+                <button
+                    id="theme-toggle"
+                    class="p-2 rounded-lg bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors">
+                    <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343
+                                17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+                <nav class="hidden sm:flex items-center space-x-6">
+                    <a
+                        href="/blogs/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        Blog</a>
+                    <a
+                        href="/answers/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        Answer</a>
+                    <a
+                        href="/about/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        About</a>
+                    <a
+                        href="/contact/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        Contact</a>
+                    <a
+                        href="/search/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </a>
+                </nav>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="sm:hidden hidden pb-4">
+            <nav class="flex flex-col space-y-2">
+                <a
+                    href="/blogs/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Blog</a>
+                <a
+                    href="/answers/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Answer</a>
+                <a
+                    href="/about/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    About</a>
+                <a
+                    href="/contact/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Contact</a>
+                <a
+                    href="/search/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Search</a>
+            </nav>
+        </div>
+    </div>
+</header>
+      <main>
+        
+<div
+    class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Article -->
+    <article
+        class="prose prose-lg dark:prose-invert max-w-none">
+        <!-- Article Header -->
+        <div class="mb-8 bg-white dark:bg-dark-1000">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <time datetime="2023-04-16T00:00:00.000Z">April 16, 2023</time>
+                <span class="mx-2">•</span>
+                <a
+                    href="/category/python/"
+                    class="hover:text-black-600 dark:hover:text-black-400 transition-colors">Python</a>
+                <span class="mx-2">•</span>
+                <span>7 min read</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                OS Module in Python beginner&#39;s guide with examples
+            </h1>
+        </div>
+        <!-- Table of Contents (only show if TOC exists) -->
+        
+            <div class="bg-black-50 dark:bg-black-900/20 border-2 border-neutral-400 dark:border-neutral-700 rounded-lg p-4 mb-8">
+                <button
+                    onclick="toggleTOC()"
+                    class="flex items-center justify-between w-full text-left font-semibold text-gray-900 dark:text-white
+                        hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                    <span class="text-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0
+                                4h5v2H8v-2z"></path>
+                        </svg>
+                        Table of Contents</span>
+                    <svg
+                        id="toc-chevron"
+                        class="w-5 h-5 transform transition-transform duration-200"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <nav
+                    id="toc-content" class="mt-4 space-y-2"><!-- TOC will be populated by JavaScript -->
+                </nav>
+            </div>
+        
+        <!-- Article Content -->
+        <div class="space-y-6" id="article-content">
+            <img class="img-hero" src="/assets/images/python-os-module.png" alt="python os module">
+<h2>Introduction to OS Module</h2>
+<p>As we all know Python is very popular for its large standard libraries. And it has a module called <span class="inline-code">os</span> A module that provides runtime interaction with the operating system for creating, removing, fetching, changing, and identifying directories files and paths.</p>
+<h2>Getting started with OS Module in Python</h2>
+<h3>Installation</h3>
+<p>OS is a part of Python's default standard libraries so don't require to install just <span class="inline-code">import os</span> before using its functions and you are done. The OS module is one of Python's standard utilities🤖.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h2>Common function of the OS Module</h2>
+<h3><em>os.mkdir()</em></h3>
+<p>To create new directories by using <span class="inline-code">os.mkdir()</span> it takes a single argument which is the name of new directory.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os  
+os.mkdir("newdir") 
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<p>The function creates a new directory named <em>newdir</em> in the current working directory.</p>
+<h3><em>os.getcwd()</em></h3>
+<p><span class="inline-code">os.getcwd()</span> returns the current working directory (CWD) of your current location where your Python script is running.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os     
+print(os.getcwd())
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.chdir()</em></h3>
+<p>We can use <span class="inline-code">os.chdir()</span> it to change your current working directory. This function takes a single argument which will be your CWD.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os  
+os.chdir("/new/directory")
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>  
+<h3><em>os.rmdir()</em></h3>
+<p>It is possible to remove the specified directory with an absolute path using the <span class="inline-code">os.rmdir()</span> function. This function also takes a single argument.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os  
+os.rmdir("/path/to/directory")
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.listdir()</em></h3>
+<p><span class="inline-code">os.listdir()</span> is used to get a list of all files and directories in your current working directory.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">list_of_files = os.listdir()
+print(list_of_files)
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.error()</em></h3>
+<p>When invalid or inaccessible file names or paths are encountered, <span class="inline-code">os.error()</span> raises an OSError.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os  
+try:  
+    filename = 'os_python.txt'  
+    f = open(filename, 'r')  
+    text = f.read()  
+    f.close()  
+except IOError:  
+    print(' Reading : ' + filename)
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.popen()</em></h3>
+<p>A file object attached to a pipe is returned by <span class="inline-code">os.popen()</span>, which opens a file or runs a command.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os     
+new_file = "python.txt"      
+    # popen() is similar to open()     
+file = open(new_file, 'w')     
+file.write("Welcome!To codeasify ")     
+file.close()     
+file = open(new_file, 'r')     
+text = file.read()     
+print(text)     
+        # popen() provides gateway and accesses the file directly     
+file = os.popen(new_file, 'w')     
+file.write("This is awesome") 
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>    
+<h3><em>os.close()</em></h3>
+<p>Files associated with descriptor fr are closed with this function.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os     
+new_file = "Python1.txt"    
+file = open(new_file, 'r')     
+text = file.read()     
+print(text)     
+os.close(file)
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>   
+<h3><em>os.rename()</em></h3>
+<p><span class="inline-code">os.rename()</span> is used to rename files. If the user has the privilege to change a file. It takes two arguments.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os   
+os.rename("old_name", "new_name")
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>     
+<h3><em>os.access()</em></h3>
+<p>The invoking user's uid and gid are used to test if the path is accessible.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os     
+import sys    
+path_1 = os.access("Python.txt", os.F_OK)     
+print("Exist path:", path_1)     
+# Checking access with os.R_OK     
+path_2 = os.access("Python.txt", os.R_OK)     
+print("It access to read the file:", path_2)     
+# Checking access with os.W_OK     
+path_3 = os.access("Python.txt", os.W_OK)     
+print("It access to write the file:", path_3)     
+# Checking access with os.X_OK     
+path_4 = os.access("Python.txt", os.X_OK)     
+print("Check if path can be executed:", path_4)  
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h2>Working with file paths with OS module in Python</h2>
+<h3><em>os.path.join()</em></h3>
+<p><span class="inline-code">os.path.join()</span> is helpful to concatenate multiple strings to create a valid path. Follow the given example.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os
+path = os.path.join('directory', 'subdirectory', 'filename')
+print(path)
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.path.split()</em></h3>
+<p><span class="inline-code">os.path.split()</span> is used to separate a file name and the directory. this function takes the complete file path and split it into two parts one is head and the second is the tail. Follow the given example.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">head, tail = os.path.split('/directory/subdirectory/file.txt')
+print(head)  # Output: /directory/subdirectory
+print(tail)  # Output: file.txt
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.path.exists()</em></h3>
+<p><span class="inline-code">os.path.exists()</span> checks whether a mentioned file name exists or not. if it exists then it returns <span class="inline-code">True</span> if not then it returns <span class="inline-code">False</span>.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">if os.path.exists('file.txt'):
+    print("The file exists!")
+else:
+    print("The file does not exist.")
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.path.isdir()</em></h3>
+<p><span class="inline-code">os.path.isdir()</span> checks whether a mentioned path is a directory or not. if it exists then it returns <span class="inline-code">True</span> if not then it returns <span class="inline-code">False</span>.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">if os.path.isdir('file.txt'):
+    print("is directory")
+else:
+    print("not a directory")
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h3><em>os.path.isfile()</em></h3>
+<p><span class="inline-code">os.path.isfile()</span> checks whether a mentioned path is a file or not. if it exists then it returns <span class="inline-code">True</span> if not then it returns <span class="inline-code">False</span>.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">if os.path.isfile('file.txt'):
+    print("is file!")
+else:
+    print("not a file")
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h2>Environment variables set by OS packages</h2>
+<p>Programs running on a system can access and modify environment variables using the environment attribute in the OS package. Environment variables can be manipulated in several ways with the OS package:</p>
+<p>1. <em><strong>Reading Environment Variables</strong></em>: For instance, to retrieve the value of the PATH environment variable, use the method <span class="inline-code">os.environ.get()</span>:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os 
+path = os.environ.get('PATH') 
+print(path)
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<p>2. <em><strong>Configuring/Writing Environment Variables</strong></em>: The <span class="inline-code">os.environ()</span> dictionary allows you to set an environment variable's value. For example, the following code sets the value of var to &quot;hello&quot;:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os
+os.environ['var'] = 'hello'
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<p>You can only modify the environment variables for the current Python process and any child processes it creates by using  <span class="inline-code">os.environ</span>.</p>
+<p>3. <strong><em>Deleting Environment Variables</em></strong>: You can delete an environment variable using the <code>os.environ.pop()</code> method For example, to delete the var environment variable, you can use the following code:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">import os
+os.environ.pop(‘var’, None)
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<p>It is returned by <span class="inline-code">pop()</span> method if the environment variable has been removed. If the environment variable does not exist, the value of None is returned.</p>
+<p>4. <em><strong>List All Environment Variables</strong></em>: Using the <span class="inline-code">os.environ.items()</span> method, you can see the values of all environment variables. For example, you can do the following:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">
+import os 
+for key, value in os.environ.items():
+    print(key, value)
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
+<h2>Conclusion</h2>
+<p>A platform-independent way of interacting with the operating system is provided by the os module in Python. It provides functions for handling files, directories, environment variables, and processes. Python code written with the os module works seamlessly on different platforms.</p>
+
+            <!-- Share buttons -->
+            <div class="border-t border-gray-200 dark:border-dark-700 pt-8 mt-12">
+                <div class="flex items-center justify-end">
+                    <a href="/" class="text-black-600 dark:text-black-400 hover:text-black-700 dark:hover:text-black-700 font-medium">
+                        ← Back to all articles
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4 mt-5">
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Share this article:</span>
+                    <button
+                        style="cursor:pointer"
+                        onclick="shareArticle('twitter')"
+                        class="text-black-600 dark:text-black-400 hover:text-black-700">Twitter</button>
+                    <button
+                        style="cursor:pointer"
+                        onclick="shareArticle('linkedin')"
+                        class="text-black-600 dark:text-black-400 hover:text-black-700">LinkedIn</button>
+                </div>
+            </div>
+        </article>
+    </div>
+      </main>
+      <!-- Footer -->
+<footer class="bg-gray-50 dark:bg-dark-850 border-t border-gray-200 dark:border-dark-700 mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <a href="/" class="text-2xl font-bold text-gray-800 dark:text-gray-400 mb-4 block">
+                    Stack<span class="text-2xl font-bold text-neutral-400 dark:text-neutral-500">View</span>
+                </a>
+                <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+                    Empowering software engineers with expert insights, best practices, and modern tool and techniques.
+                </p>
+                <div class="flex space-x-4">
+                    <a
+                        href="https://x.com/stackviewdev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713
+                                6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/stackview.dev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125
+                                11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491
+                                0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/stackview.dev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012
+                                3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204
+                                0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849
+                                0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014
+                                7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98
+                                6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618
+                                6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259
+                                0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44
+                                0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.youtube.com/@stackviewdev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502
+                                6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0
+                                9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273
+                                3.568z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a
+                            href="/blogs"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                            Blog</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/answers"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                            Answer</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/about/"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">About</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/contact/"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Contact</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/privacy-policy/"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/sitemap.xml"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Top Categories</h4>
+                <ul class="space-y-2">
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/data-analysis/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Data Analysis</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/database/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Database</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/django/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Django</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/general-tech/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">General Tech</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/javascript/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">JavaScript</a>
+                            </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-200 dark:border-dark-700 mt-8 pt-8 text-center">
+            <p class="text-gray-600 dark:text-gray-400">Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                | StackView | All rights reserved</p>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html></head></html></head></html>
