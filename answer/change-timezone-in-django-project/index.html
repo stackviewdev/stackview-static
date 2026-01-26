@@ -13,21 +13,23 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to change timezone in Django projects
+    <title>
+      How to change timezone in Django projects
       
         - StackView
+      
     </title>
-    <meta name="description" content="earn - how to set your desired timezone in Django project with quick and simple steps. To do this go to your settings.py file in the">
-    <meta name="keywords" content="Python, knowledge, JavaScript, CSS, Algorithms, Tricks, Data Science, HTML, System Design, Android Development, django, Data Structures, Cybersecurity, Machine Learning, NodeJS, C++, React, Tutorial, C, Coding, Web Development, Technical Blogs, Programming, Cloud computing, Codeasify, Interview Questions, Interview Preparation, Technical blog, Computer Science, SQL">
+    <meta name="description" content="Learn, How we can change the timezone of our Django project then the project will refer to that time to give you a time stamp on that timezone.">
+    <meta name="keywords" content="stackview, django, command">
     <meta name="author" content="StackView">
     <meta property="og:title" content="How to change timezone in Django projects">
-    <meta property="og:description" content="earn - how to set your desired timezone in Django project with quick and simple steps. To do this go to your settings.py file in the">
+    <meta property="og:description" content="Learn, How we can change the timezone of our Django project then the project will refer to that time to give you a time stamp on that timezone.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://stackview.dev/answer/change-timezone-in-django-project/">
     
       <meta name="twitter:card" content="summary">
       <meta name="twitter:title" content="How to change timezone in Django projects">
-      <meta name="twitter:description" content="earn - how to set your desired timezone in Django project with quick and simple steps. To do this go to your settings.py file in the">
+      <meta name="twitter:description" content="Learn, How we can change the timezone of our Django project then the project will refer to that time to give you a time stamp on that timezone.">
     
     <link rel="canonical" href="https://stackview.dev/answer/change-timezone-in-django-project/">
     <link rel="stylesheet" href="/assets/css/output.css">
@@ -141,7 +143,7 @@
     <article
         class="prose prose-lg dark:prose-invert max-w-none">
         <!-- Article Header -->
-        <header class="mb-8">
+        <div class="mb-8 bg-white dark:bg-dark-1000">
             <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                 <time datetime="2024-05-19T00:00:00.000Z">May 19, 2024</time>
                 <span class="mx-2">•</span>
@@ -154,37 +156,60 @@
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 How to change timezone in Django projects
             </h1>
-        </header>
+        </div>
         <!-- Table of Contents (only show if TOC exists) -->
+        
+            <div class="bg-black-50 dark:bg-black-900/20 border border-black-200 dark:border-black-800 rounded-lg p-4 mb-8">
+                <button
+                    onclick="toggleTOC()"
+                    class="flex items-center justify-between w-full text-left font-semibold text-gray-900 dark:text-white
+                        hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                    <span class="text-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0
+                                4h5v2H8v-2z"></path>
+                        </svg>
+                        Table of Contents</span>
+                    <svg
+                        id="toc-chevron"
+                        class="w-5 h-5 transform transition-transform duration-200"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <nav
+                    id="toc-content" class="mt-4 space-y-2"><!-- TOC will be populated by JavaScript -->
+                </nav>
+            </div>
         
         <!-- Article Content -->
         <div class="space-y-6" id="article-content">
             <p><em>In this answer - We will take a closer look at how to set or change your desired time zone in your existing Django project.</em></p>
-<p>Here is an example of a newly created Django project directory structure in this case our project name is MyLedger</p>
-<p>|── MyLedger
-├── <strong>init</strong>.py
-├── asgi.py
-├── settings.py
-├── urls.py
-└── wsgi.py
-|── manage.py</p>
+<p>Here is an example of a newly created Django project directory structure in this case our project name is <span class="inline-code">MyLedger</span></p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">|── MyLedger
+   ├── __init__.py
+   ├── asgi.py
+   ├── settings.py
+   ├── urls.py
+   └── wsgi.py
+|── manage.py
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
 <h3>Steps to set the timezone in the Django project</h3>
-<p>PATH: MyLedger -&gt; settings.py -&gt; search &quot;TIME_ZONE&quot; -&gt; change</p>
-<ol>
-<li>
-<p>Go to your project directory in this case we have the MyLedger directory.</p>
-</li>
-<li>
-<p>Go to the settings.py file.</p>
-</li>
-<li>
-<p>Search for TIME_ZONE if it is available then change it to your desired timezone. if it is not available then add it to your settings.py file. Please see an example given below.</p>
-</li>
-<li>
-<p>Save the settings.py file.</p>
-</li>
-</ol>
-<p>TIME_ZONE = 'America/New_York'</p>
+<p>PATH: <span class="inline-code">MyLedger -&gt; settings.py -&gt; search &quot;TIME_ZONE&quot; -&gt; change</span></p>
+<p>1 - Go to your project directory in this case we have the <span class="inline-code">MyLedger</span> directory.</p>
+<p>2 - Go to the <span class="inline-code">settings.py</span> file.</p>
+<p>3 - Search for <span class="inline-code">TIME_ZONE</span> if it is available then change it to your desired timezone. if it is not available then add it to your <span class="inline-code">settings.py</span> file. Please see an example given below.</p>
+<p>4 - Save the settings.py file.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">TIME_ZONE = 'America/New_York'
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button>
+</div>
 <p>Hopefully, this answer will help you.</p>
 
             <!-- Share buttons -->
@@ -315,25 +340,39 @@
                         
                             <li>
                                 <a
-                                    href="/category/python/"
-                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Python</a>
+                                    href="/category/database/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Database</a>
                             </li>
                         
                     
                         
                             <li>
                                 <a
-                                    href="/category/statistics/"
-                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Statistics</a>
+                                    href="/category/django/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Django</a>
                             </li>
                         
                     
                         
                             <li>
                                 <a
-                                    href="/category/version-control/"
-                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Version Control</a>
+                                    href="/category/general-tech/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">General Tech</a>
                             </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/javascript/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">JavaScript</a>
+                            </li>
+                        
+                    
+                        
+                    
+                        
+                    
                         
                     
                 </ul>
@@ -351,4 +390,4 @@
     </div>
     <script src="/assets/js/script.js"></script>
   </body>
-</html>
+</html></head></html></head></html>

@@ -1,117 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset
+	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<url>
+		<loc>https://stackview.dev/</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/about/</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/contact/</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/blogs/</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/answers/</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/privacy-policy/</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/category/python</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/category/data-analysis</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/category/version-control</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/category/statistics</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
     <url>
-        <loc>https://stackview.dev/</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
+		<loc>https://stackview.dev/category/database</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
     <url>
-        <loc>https://stackview.dev/about/</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+		<loc>https://stackview.dev/category/django</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
     <url>
-        <loc>https://stackview.dev/contact/</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+		<loc>https://stackview.dev/category/general-tech</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
     <url>
-        <loc>https://stackview.dev/blogs/</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://stackview.dev/answers/</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://stackview.dev/privacy-policy/</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://stackview.dev/category/python</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://stackview.dev/category/data-analysis</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://stackview.dev/category/version-control</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://stackview.dev/category/statistics</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://stackview.dev/category/statistics</loc>
-        <lastmod>2025-10-12</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-<loc>https://stackview.dev/blog/how-to-read-csv/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>http://stackview.dev/blog/how-to-read-excel-in-python-without-pandas/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>http://stackview.dev/blog/create-excel-with-python/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>http://stackview.dev/blog/export-dataframe-to-csv-with-pandas/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>http://stackview.dev/blog/mean-median-mode/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>http://stackview.dev/blog/exploratory-data-analysis/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>http://stackview.dev/blog/install-git-on-local-system/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
-<url>
-<loc>http://stackview.dev/blog/configure-git-on-local-system/</loc>
-<lastmod>2025-10-13</lastmod>
-<changefreq>weekly</changefreq>
-<priority>0.9</priority>
-</url>
+		<loc>https://stackview.dev/category/javascript</loc>
+		<lastmod>2025-10-12</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://stackview.dev/blog/how-to-read-csv/</loc>
+		<lastmod>2022-11-23</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/how-to-read-excel-in-python-without-pandas/</loc>
+		<lastmod>2023-01-30</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/create-excel-with-python/</loc>
+		<lastmod>2023-10-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/export-dataframe-to-csv-with-pandas/</loc>
+		<lastmod>2022-04-15</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/mean-median-mode/</loc>
+		<lastmod>2024-02-27</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/exploratory-data-analysis/</loc>
+		<lastmod>2022-05-15</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/install-git-on-local-system/</loc>
+		<lastmod>2024-10-16</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/configure-git-on-local-system/</loc>
+		<lastmod>2023-10-13</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/how-to-create-django-project/</loc>
+		<lastmod>2022-12-18</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/top-10-most-used-git-commands/</loc>
+		<lastmod>2025-10-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/object-oriented-programming/</loc>
+		<lastmod>2022-12-21</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/python-coding-tips-and-tricks/</loc>
+		<lastmod>2023-02-04</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/top-trending-open-source-tech/</loc>
+		<lastmod>2023-03-15</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/os-module-in-python/</loc>
+		<lastmod>2023-04-16</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/javascript-refresh-method/</loc>
+		<lastmod>2023-06-10</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/mongodb-with-pymongo/</loc>
+		<lastmod>2024-05-05</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/blog/use-cronjobs-with-django-crontab/</loc>
+		<lastmod>2024-05-27</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/create-python-virtual-environment/</loc>
+		<lastmod>2022-12-21</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/what-is-an-object/</loc>
+		<lastmod>2022-12-18</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/what-is-a-class/</loc>
+		<lastmod>2022-12-20</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/what-is-a-constructor/</loc>
+		<lastmod>2022-12-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/python-enumerate/</loc>
+		<lastmod>2022-12-22</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/any-function-in-python/</loc>
+		<lastmod>2023-02-07</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/permission-denied-npm-install/</loc>
+		<lastmod>2023-02-18</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/map-function-in-python/</loc>
+		<lastmod>2023-03-06</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/create-new-app-in-django-project/</loc>
+		<lastmod>2024-05-08</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>http://stackview.dev/answer/change-timezone-in-django-project/</loc>
+		<lastmod>2024-05-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
 </urlset>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWXM1H2GF4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-WWXM1H2GF4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Explain what is object oriented programming with example
+      
+        - StackView
+      
+    </title>
+    <meta name="description" content="An object-oriented programming paradigm (OOP) is a programming paradigm based on objects that hold data and instructions for manipulating the data. Object-oriented programming languages allow you to define both the data type and methods of an object.">
+    <meta name="keywords" content="stackview, python">
+    <meta name="author" content="StackView">
+    <meta property="og:title" content="Explain what is object oriented programming with example">
+    <meta property="og:description" content="An object-oriented programming paradigm (OOP) is a programming paradigm based on objects that hold data and instructions for manipulating the data. Object-oriented programming languages allow you to define both the data type and methods of an object.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stackview.dev/blog/object-oriented-programming/">
+    
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Explain what is object oriented programming with example">
+      <meta name="twitter:description" content="An object-oriented programming paradigm (OOP) is a programming paradigm based on objects that hold data and instructions for manipulating the data. Object-oriented programming languages allow you to define both the data type and methods of an object.">
+    
+    <link rel="canonical" href="https://stackview.dev/blog/object-oriented-programming/">
+    <link rel="stylesheet" href="/assets/css/output.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/png" href="/assets/images/faviconv.png"/>
+  </head>
+  <body class="bg-white dark:bg-dark-1000 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <div class="min-h-screen">
+      <!-- Header -->
+<header class="bg-white dark:bg-dark-800 border-b border-gray-200 dark:border-dark-700 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+            class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/" class="flex items-center justify-center">
+                    <img src="/assets/images/logov-dark.png" alt="logo" class="site-logo hidden dark:block" height="30" width="30">
+                    <img src="/assets/images/logov.png" alt="logo" class="site-logo block dark:hidden" height="30" width="30">
+                    <span class="text-[22px] ml-2 mt-[2px] font-bold text-black dark:text-white">Stack<span class="text-neutral-400 dark:text-neutral-500">View</span>
+                    </span>
+                </a>
+            </div>
+            <!-- Navigation -->
+            <div
+                class="flex items-center space-x-4">
+                <!-- Theme Toggle -->
+                <button
+                    id="theme-toggle"
+                    class="p-2 rounded-lg bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors">
+                    <svg class="w-5 h-5 dark:hidden" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                    <svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343
+                                17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+                <nav class="hidden sm:flex items-center space-x-6">
+                    <a
+                        href="/blogs/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        Blog</a>
+                    <a
+                        href="/answers/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        Answer</a>
+                    <a
+                        href="/about/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        About</a>
+                    <a
+                        href="/contact/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        Contact</a>
+                    <a
+                        href="/search/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium ">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </a>
+                </nav>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="sm:hidden p-2 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="sm:hidden hidden pb-4">
+            <nav class="flex flex-col space-y-2">
+                <a
+                    href="/blogs/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Blog</a>
+                <a
+                    href="/answers/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Answer</a>
+                <a
+                    href="/about/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    About</a>
+                <a
+                    href="/contact/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Contact</a>
+                <a
+                    href="/search/"
+                    class="text-gray-700 dark:text-gray-300 hover:text-black-600 dark:hover:text-black-400 font-medium py-2 ">
+                    Search</a>
+            </nav>
+        </div>
+    </div>
+</header>
+      <main>
+        
+<div
+    class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Article -->
+    <article
+        class="prose prose-lg dark:prose-invert max-w-none">
+        <!-- Article Header -->
+        <div class="mb-8 bg-white dark:bg-dark-1000">
+            <div class="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <time datetime="2022-12-21T00:00:00.000Z">December 21, 2022</time>
+                <span class="mx-2">•</span>
+                <a
+                    href="/category/python/"
+                    class="hover:text-black-600 dark:hover:text-black-400 transition-colors">Python</a>
+                <span class="mx-2">•</span>
+                <span>12 min read</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Explain what is object oriented programming with example
+            </h1>
+        </div>
+        <!-- Table of Contents (only show if TOC exists) -->
+        
+            <div class="bg-black-50 dark:bg-black-900/20 border-2 border-neutral-400 dark:border-neutral-700 rounded-lg p-4 mb-8">
+                <button
+                    onclick="toggleTOC()"
+                    class="flex items-center justify-between w-full text-left font-semibold text-gray-900 dark:text-white
+                        hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                    <span class="text-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0
+                                4h5v2H8v-2z"></path>
+                        </svg>
+                        Table of Contents</span>
+                    <svg
+                        id="toc-chevron"
+                        class="w-5 h-5 transform transition-transform duration-200"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <nav
+                    id="toc-content" class="mt-4 space-y-2"><!-- TOC will be populated by JavaScript -->
+                </nav>
+            </div>
+        
+        <!-- Article Content -->
+        <div class="space-y-6" id="article-content">
+            <img class="img-hero" src="/assets/images/python-oops.png" alt="python oops">
+<h2>What is object-oriented programming(OOPs)?</h2>
+<p>As the name suggests, programming that is oriented with objects. It sounds cool, but what does it mean?</p>
+<p>An object-oriented programming (OOP) is a programming standard that is based on the concept of objects. That's fine but <a href="https://stackview.dev/answer/what-is-an-object/" style="color:#2563eb;font-weight:700"> what is an object?</a> Hope you got an idea about the object.</p>
+<p>NOTE: We will use OOPs as object-oriented programming in short form</p>
+<p>Let's discuss OOPs in detail.</p>
+<p>For example, We have to make a software application in which we have many features like catalog, payment, checkout, authentication and many more. In order to design/model that system through OOPs standards we have to make a collection of objects, where each object represents some particular feature of the system. The characteristics of an object are described by its data (attributes) and behavior (methods).</p>
+<p>Wait, Why are we concern about this design and objects?</p>
+<p>Okay, so let's discuss about the advantages of the OOPs.</p>
+<h2>Advantages of OOPs</h2>
+<p>In software development, object-oriented programming (OOPs) has several advantages:</p>
+<p>1. <strong>Modularity:</strong> OOPs allows you to modularize your code, meaning that you can break it down into smaller, independent units (objects) that can be easily reused and maintained. This makes it easier to understand and update your code.</p>
+<p>2. <strong>Flexibility:</strong> In addition to allowing you to extend or modify your code more easily, it also gives you the ability to make new classes that inherit from existing classes some of their attributes and behavior.</p>
+<p>3. <strong>Reusability:</strong> A key advantage of OOPs is the ability to reuse code between different objects, which can save you a lot of time and effort while developing an application.</p>
+<p>4. <strong>Scalability:</strong> OOPs allows you to easily scale your code as your project grows, as you are able to add new objects and functionality as your project grows.</p>
+<p>5. <strong>Maintainability:</strong> OOPs makes it easier to maintain your code. This is because you can make changes to a single class and have those changes automatically reflected in all the objects of that class.</p>
+<p>6. <strong>Readability:</strong> The clear and modular structure of OOPs promotes easier reading and understanding of your code.</p>
+<p>7. <strong>Testability:</strong> OOPs makes it easier to test your code, as you can test individual objects and their behavior separately from the rest of the code.</p>
+<p>That's great, I want to learn OOPs now.</p>
+<p>Okay, Basically we have four main principles of OOPs.</p>
+<h2>Four main principles of OOPs</h2>
+<p>In object-oriented programming, we have four main principles/concepts which allow us to achieve all these benefits, and in a nutshell, these four concepts are:</p>
+<p>1.  Encapsulation<br>
+2.  Abstraction<br>
+3.  Inheritance<br>
+4.  Polymorphism</p>
+<p>Let's take a closer look at each one of them one by one.</p>
+<h2>1. Encapsulation (What is Encapsulation?)</h2>
+<hr>
+<p>Encapsulation is a concept in object-oriented programming (OOP) that refers to the idea of bundling data and methods that operate on that data within a single unit, or object. Encapsulation allows you to hide the implementation details of a class from other parts of your code. This makes it easier to change or update the implementation without affecting the rest of the code.</p>
+<p>In OOP, you can achieve encapsulation through the use of access modifiers, such as <strong>public</strong>, <strong>private</strong>, and <strong>protected</strong>. These modifiers control the visibility and accessibility of class members (attributes and methods) from outside the class.</p>
+<p>For example, you might want to mark certain attributes or methods as private. This is because you only want them to be accessible within the class itself, and not from outside the class. This can help prevent other parts of your code from accidentally or intentionally modifying the internal state of the object.</p>
+<p>Here's an example of encapsulation in Python using a simple <strong>BankAccount</strong> class:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # private attribute
+<p>def check_balance(self):
+return self.__balance</p>
+<p>def deposit(self, amount):
+self.__balance += amount</p>
+<p>def withdraw(self, amount):
+if self.__balance &gt;= amount:
+self.__balance -= amount
+return True
+else:
+return False
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button></p>
+</div>
+<p>In this example, the <strong>BankAccount</strong> class has a <strong>balance</strong> attribute that is marked as <strong>private</strong> by prefixing it with two underscores (<strong>__</strong>). This means that the <strong>balance</strong> attribute can only be accessed or modified from within the <strong>BankAccount</strong> class, and not from outside the class.</p>
+<p>To access or modify the <strong>balance</strong> attribute from outside the class, you can define <strong>public</strong> methods like <strong>deposit</strong>, <strong>check_balance</strong>, <strong>withdraw</strong>.</p>
+<h2>2. Abstraction (What is Abstraction?)</h2>
+<hr>
+<p>Abstraction is a concept in object-oriented programming (OOPs) that refers to the idea of exposing only the necessary details of an object to the user, while hiding the implementation details.</p>
+<p>Abstraction allows you to focus on what an object does, rather than how it does it.</p>
+<p>In OOPs, abstraction can be achieved in several ways:</p>
+<p>1. <strong>Abstract classes:</strong> An abstract class is a class that cannot be instantiated (means we can't create an object from that class), but can be subclassed. Abstract classes define a set of abstract methods that must be implemented by any concrete (non-abstract) subclass. Abstract methods are methods that are declared in the abstract class, but do not have an implementation. This allows you to define a common interface for a group of related classes, while leaving the implementation details up to individual subclasses.</p>
+<p>2. <strong>Interfaces:</strong> An interface is a set of abstract methods that define a common set of behaviors that must be implemented by any class that implements the interface. Interfaces are similar to abstract classes, but they cannot have any implementation details and cannot have any attributes.</p>
+<p>3. <strong>Information hiding:</strong> Information hiding is the practice of hiding the implementation details of a class from the user. This can be achieved through the use of access modifiers, such as <strong>private</strong> and <strong>protected</strong>, which control the visibility and accessibility of class members (attributes and methods) from outside the class.</p>
+<p>A Python abstract class and interface are used here to illustrate abstraction:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">from abc import ABC, abstractmethod
+<p>class BankAccount(ABC):
+@abstractmethod
+def deposit(self, amount):
+pass</p>
+<p>@abstractmethod
+def withdraw(self, amount):
+pass</p>
+<p>@abstractmethod
+def check_balance(self):
+pass</p>
+<p>class SavingsAccount(BankAccount):
+def <strong>init</strong>(self, balance):
+self.balance = balance</p>
+<p>def deposit(self, amount):
+self.balance += amount</p>
+<p>def withdraw(self, amount):
+if self.balance &gt;= amount:
+self.balance -= amount
+return True
+else:
+return False</p>
+<p>def check_balance(self):
+return self.balance</p>
+<p>class CurrentAccount(BankAccount):
+def <strong>init</strong>(self, balance, overdraft_limit):
+self.balance = balance
+self.overdraft_limit = overdraft_limit</p>
+<p>def deposit(self, amount):
+self.balance += amount</p>
+<p>def withdraw(self, amount):
+if self.balance - amount &gt;= -self.overdraft_limit:
+self.balance -= amount
+return True
+else:
+return False</p>
+<p>def check_balance(self):
+return self.balance
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button></p>
+</div>
+<p>In this example, the <strong>BankAccount</strong> interface defines the abstract methods <strong>deposit</strong>, <strong>withdraw</strong>, and <strong>check_balance</strong> that must be implemented by any class that implements the interface.</p>
+<p>The <strong>SavingsAccount</strong> and <strong>CurrentAccount</strong> classes both implement the <strong>BankAccount</strong> interface, meaning they must provide implementations of these abstract methods.</p>
+<p>This allows you to define a common interface for different types of bank accounts, while leaving the implementation details up to the individual subclasses.</p>
+<h2>3. Inheritance (What is Inheritance?)</h2>
+<hr>
+<p>Inheritance is a concept in object-oriented programming (OOP) that refers to the ability of a class to inherit the attributes and behaviors of another class. Using inheritance, you can create a new class that is a modified version of an existing class. Classes can be arranged in hierarchies and code can be reused within them.</p>
+<p>Python allows inheritance by defining a subclass and specifying the superclass in parentheses after the subclass name. Subclasses inherit all the attributes and behaviors of the superclass, as well as being able to define their own unique attributes and behaviors.</p>
+<p>Here's an example of inheritance in Python using a simple <strong>BankAccount</strong> class and two subclasses: <strong>SavingsAccount</strong> and <strong>CurrentAccount</strong>:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">class BankAccount:
+    def __init__(self, balance):
+        self.balance = balance
+<p>def deposit(self, amount):
+self.balance += amount</p>
+<p>def withdraw(self, amount):
+if self.balance &gt;= amount:
+self.balance -= amount
+return True
+else:
+return False</p>
+<p>def check_balance(self):
+return self.balance</p>
+<p>class SavingsAccount(BankAccount):
+def <strong>init</strong>(self, balance, interest_rate):
+super().<strong>init</strong>(balance)  # call the superclass constructor
+self.interest_rate = interest_rate</p>
+<p>def add_interest(self):
+self.balance += self.balance * self.interest_rate</p>
+<p>class CurrentAccount(BankAccount):
+def <strong>init</strong>(self, balance, overdraft_limit):
+super().<strong>init</strong>(balance)  # call the superclass constructor
+self.overdraft_limit = overdraft_limit</p>
+<p>def withdraw(self, amount):
+if self.balance - amount &gt;= -self.overdraft_limit:
+self.balance -= amount
+return True
+else:
+return False
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button></p>
+</div>
+<p>In this example, the <strong>SavingsAccount</strong> and <strong>CurrentAccount</strong> classes both inherit from the <strong>BankAccount</strong> superclass.</p>
+<p>This means that they both have access to the <strong>deposit</strong>, <strong>withdraw</strong>, and <strong>check_balance</strong> methods of the <strong>BankAccount</strong> class, as well as their own unique methods: <strong>add_interest</strong> for <strong>SavingsAccount</strong> and an overridden <strong>withdraw</strong> method for <strong>CurrentAccount</strong>.</p>
+<h2>4. Polymorphism (What is Polymorphism?)</h2>
+<hr>
+<p>In object-oriented programming (OOPs), polymorphism refers to a class's ability to take on multiple forms.</p>
+<p>A polymorphic interface (e.g., a method or function) is one that can be implemented by many classes, each having its own implementation. By doing this, you are able to write code that can work with a variety of objects without needing to know what type of object it is working with.</p>
+<p>There are several ways to achieve polymorphism in OOPs:</p>
+<p>1. <strong>Method overloading</strong>: This is the ability to define multiple methods with the same name, but with different parameters. When the method is called, the correct implementation is chosen based on the number and type of arguments passed to the method.</p>
+<p>2. <strong>Method overriding</strong>: This is the ability to define a method in a subclass that has the same name and parameters as a method in the superclass, but with a different implementation. When the method is called, the subclass implementation is used instead of the superclass</p>
+<p>3. <strong>Dynamic dispatch</strong>: This is the ability to determine at runtime which method to call based on the type of the object being called. This can be achieved through the use of inheritance and method override.</p>
+<p>An example of polymorphism in Python might be a bank account system that has a base class called &quot;<strong>Account</strong>&quot; and two subclasses called &quot;<strong>CurrentAccount</strong>&quot; and &quot;<strong>SavingsAccount</strong>&quot;.</p>
+<p>The Account class might define methods such as &quot;<strong>deposit</strong>&quot; and &quot;<strong>withdraw</strong>&quot; that are common to both types of accounts, while the <strong>CurrentAccount</strong> and <strong>SavingsAccount</strong> classes might override these methods to implement account-specific behavior, such as calculating and applying fees or interest.</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">class Account:
+    def init(self, balance=0):
+        self.balance = balance
+<p>def deposit(self, amount):
+self.balance += amount
+return self.balance</p>
+<p>def withdraw(self, amount):
+if amount &gt; self.balance:
+raise ValueError(&quot;Insufficient funds&quot;)
+self.balance -= amount
+return self.balance</p>
+<p>class CurrentAccount(Account):
+def init(self, balance=0):
+super().init(balance)
+self.fee = 0.01</p>
+<p>def withdraw(self, amount):
+return super().withdraw(amount + self.fee)</p>
+<p>class SavingsAccount(Account):
+def init(self, balance=0):
+super().init(balance)
+self.interest_rate = 0.02</p>
+<p>def deposit(self, amount):
+return super().deposit(amount * (1 + self.interest_rate))
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button></p>
+</div>
+<p>In this example, the <strong>CurrentAccount</strong> class overrides the <strong>withdraw</strong> method to apply a fee to the withdrawal amount.</p>
+<p>In contrast, the <strong>SavingsAccount</strong> class overrides the <strong>deposit</strong> method to apply interest to the deposited amount. These subclasses can be used in the same way as the base Account class, but the methods will behave differently depending on the type of account being used.</p>
+<p>For example:</p>
+<div class="relative bg-gray-50 dark:bg-dark-800 rounded-2xl p-0 my-8 border border-gray-200 dark:border-gray-700">
+<pre class="text-sm"><code class="language-javascript">checking_account = CheckingAccount(100)
+savings_account = SavingsAccount(100)
+<p>checking_account.deposit(50)  # returns 150
+savings_account.deposit(50)  # returns 105
+checking_account.withdraw(75)  # returns 73.75
+savings_account.withdraw(75)  # returns 25
+</code></pre>
+<button class="copy-btn" onclick="copyToClipboard(this)">Copy Code</button></p>
+</div>
+<p>In this code, the <strong>deposit</strong> method for the <strong>CurrentAccount</strong> class is called with a value of 50, which is added to the account balance and a fee of 0.01 is applied. The <strong>deposit</strong> method for the <strong>SavingsAccount</strong> class is called with a value of 50, which is added to the account balance and interest of 0.02 is applied.</p>
+<p>The <strong>withdraw</strong> method for the <strong>CurrentAccount</strong> class is called with a value of 75, which is subtracted from the account balance and a fee of 0.01 is applied. The <strong>withdraw</strong> method for the <strong>SavingsAccount</strong> class is called with a value of 75, which is subtracted from the account balance.</p>
+<h2>Conclusion</h2>
+<p>Object-oriented programming (OOP) is a programming paradigm that is based on the concept of objects, which are data structures that contain both data and methods that operate on that data. OOP is designed to make it easier to design and maintain complex software systems by organizing code into reusable objects and by encapsulating the implementation details of those objects.</p>
+<p>The four pillars of OOP are inheritance, encapsulation, abstraction, and polymorphism. Inheritance allows you to create a new class that is a modified version of an existing class, and can be used to create a hierarchy of classes and reuse code between them. Encapsulation refers to the idea of bundling data and methods that operate on that data within a single unit, or object, and hiding the implementation details of that object from other parts of the code. Abstraction refers to the idea of exposing only the necessary details of an object to the user, while hiding the implementation details. Polymorphism refers to the ability of a class to take on multiple forms, through method overloading, method overriding, and dynamic dispatch.</p>
+<p>OOP has many advantages, including code reuse, modularity, and maintainability. However, it is not the only programming paradigm, and there are other approaches, such as procedural programming and functional programming, that may be better suited for certain tasks. Ultimately, the choice of programming paradigm will depend on the specific needs of the project and the preferences of the programmer.</p>
+
+            <!-- Share buttons -->
+            <div class="border-t border-gray-200 dark:border-dark-700 pt-8 mt-12">
+                <div class="flex items-center justify-end">
+                    <a href="/" class="text-black-600 dark:text-black-400 hover:text-black-700 dark:hover:text-black-700 font-medium">
+                        ← Back to all articles
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4 mt-5">
+                    <span class="text-sm text-gray-500 dark:text-gray-400">Share this article:</span>
+                    <button
+                        style="cursor:pointer"
+                        onclick="shareArticle('twitter')"
+                        class="text-black-600 dark:text-black-400 hover:text-black-700">Twitter</button>
+                    <button
+                        style="cursor:pointer"
+                        onclick="shareArticle('linkedin')"
+                        class="text-black-600 dark:text-black-400 hover:text-black-700">LinkedIn</button>
+                </div>
+            </div>
+        </article>
+    </div>
+      </main>
+      <!-- Footer -->
+<footer class="bg-gray-50 dark:bg-dark-850 border-t border-gray-200 dark:border-dark-700 mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="md:col-span-2">
+                <a href="/" class="text-2xl font-bold text-gray-800 dark:text-gray-400 mb-4 block">
+                    Stack<span class="text-2xl font-bold text-neutral-400 dark:text-neutral-500">View</span>
+                </a>
+                <p class="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+                    Empowering software engineers with expert insights, best practices, and modern tool and techniques.
+                </p>
+                <div class="flex space-x-4">
+                    <a
+                        href="https://x.com/stackviewdev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713
+                                6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.facebook.com/stackview.dev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125
+                                11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491
+                                0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/stackview.dev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012
+                                3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204
+                                0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849
+                                0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014
+                                7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98
+                                6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618
+                                6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259
+                                0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44
+                                0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                        </svg>
+                    </a>
+                    <a
+                        href="https://www.youtube.com/@stackviewdev"
+                        target="_blank"
+                        class="text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502
+                                6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0
+                                9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273
+                                3.568z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a
+                            href="/blogs"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                            Blog</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/answers"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">
+                            Answer</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/about/"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">About</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/contact/"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Contact</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/privacy-policy/"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a
+                            href="/sitemap.xml"
+                            class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Sitemap</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-gray-900 dark:text-white mb-4">Top Categories</h4>
+                <ul class="space-y-2">
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/data-analysis/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Data Analysis</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/database/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Database</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/django/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">Django</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/general-tech/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">General Tech</a>
+                            </li>
+                        
+                    
+                        
+                            <li>
+                                <a
+                                    href="/category/javascript/"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-black-600 dark:hover:text-black-400 transition-colors">JavaScript</a>
+                            </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-200 dark:border-dark-700 mt-8 pt-8 text-center">
+            <p class="text-gray-600 dark:text-gray-400">Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                | StackView | All rights reserved</p>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html></head></html></head></html>
